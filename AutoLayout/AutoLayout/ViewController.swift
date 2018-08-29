@@ -22,11 +22,12 @@ class ViewController: UIViewController {
         leftView.setTitle("Left view", for: .normal)
         rightView.setTitle("Right view", for: .normal)
         
-//        view.addSubview(leftView)
-//        view.addSubview(rightView)
+        view.addSubview(leftView)
+        view.addSubview(rightView)
         
 //        addConstraintsThroughAnchors()
 //        addNormalConstraints()
+//        addVFLConstraints()
     }
     
     private func addConstraintsThroughAnchors() {
@@ -60,28 +61,54 @@ class ViewController: UIViewController {
         
 //        leftView.translatesAutoresizingMaskIntoConstraints = false
 //        rightView.translatesAutoresizingMaskIntoConstraints = false
-//        
+//
 //        // Adding constraints to leftView
-//        
+//
 //        var leading = NSLayoutConstraint(item: leftView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 10)
 //        var center = NSLayoutConstraint(item: leftView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0)
 //        var height = NSLayoutConstraint(item: leftView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
-//        
+//
 //        view.addConstraints([leading, center])
 //        leftView.addConstraint(height)
-//        
+//
 //        // Adding constraints to rightView
-//        
+//
 //        leading = NSLayoutConstraint(item: rightView, attribute: .leading, relatedBy: .equal, toItem: leftView, attribute: .trailing, multiplier: 1, constant: 20)
 //        center = NSLayoutConstraint(item: rightView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0)
 //        height = NSLayoutConstraint(item: rightView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
 //        let trailingConstraint = NSLayoutConstraint(item: rightView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -10)
 //        let equalWidthConstraint = NSLayoutConstraint(item: rightView, attribute: .width, relatedBy: .equal, toItem: leftView, attribute: .width, multiplier: 1, constant: 0)
-//        
+//
 //        view.addConstraints([center, trailingConstraint])
 //        view.addConstraint(leading)
 //        rightView.addConstraint(height)
 //        view.addConstraint(equalWidthConstraint)
+    }
+    
+    
+    private func addVFLConstraints() {
+        
+//        let views = Dictionary(dictionaryLiteral:
+//            ("leftView", leftView),
+//            ("rightView", rightView))
+//
+//        leftView.translatesAutoresizingMaskIntoConstraints = false
+//        rightView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        var allConstraints: [NSLayoutConstraint] = []
+//
+//        var verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[leftView(==200)]", metrics: nil, views: views)
+//        var horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[leftView]", metrics: nil, views: views)
+//        allConstraints += verticalConstraints
+//        allConstraints += horizontalConstraints
+//
+//        verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[rightView(==200)]", options: [] , metrics: nil, views: views)
+//        horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:[leftView]-20-[rightView(==leftView)]-20-|", options: [] , metrics: nil, views: views)
+//
+//        allConstraints += verticalConstraints
+//        allConstraints += horizontalConstraints
+//
+//        NSLayoutConstraint.activate(allConstraints)
     }
 }
 
