@@ -10,22 +10,12 @@ import UIKit
 
 class TraitsViewController: UIViewController {
 
-    @IBOutlet weak var greyView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        coordinator.animate(alongsideTransition: { (context) in
-            self.greyView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        }) { (context) in
-            UIView.animate(withDuration: 0.4, animations: {
-                self.greyView.transform = .identity
-            })
-        }
+        view.layoutIfNeeded()
+        profileImageView.layer.cornerRadius = profileImageView.bounds.height / 2
+        profileImageView.layer.masksToBounds = true
     }
 }
