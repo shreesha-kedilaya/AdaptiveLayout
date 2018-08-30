@@ -13,6 +13,29 @@ class ViewController: UIViewController {
     var leftView = UIButton()
     var rightView = UIButton()
     
+    //iPad
+    let regularTraits = UITraitCollection(traitsFrom:
+        [UITraitCollection(horizontalSizeClass : .regular),
+         UITraitCollection(verticalSizeClass : .regular)])
+    
+    //iPhone 6plus L.S
+    let regularCompactTraits = UITraitCollection(traitsFrom: [UITraitCollection(horizontalSizeClass : .regular),
+        UITraitCollection(verticalSizeClass : .compact)])
+    
+    // iPhone 4, 4s, 5, 5c, 5s, 6, 6s L.S
+    let compactCompactTraits = UITraitCollection(traitsFrom: [UITraitCollection(horizontalSizeClass: .compact),
+        UITraitCollection(verticalSizeClass: .compact)])
+    
+    //all iphones portrait
+    let compactRegular = UITraitCollection(traitsFrom:
+        [UITraitCollection(horizontalSizeClass : .compact),
+         UITraitCollection(verticalSizeClass : .regular)])
+    
+    let horizontalCompactClass = UITraitCollection(horizontalSizeClass: .compact)
+    
+    var leftViewHeightConstraint: NSLayoutConstraint!
+    var rightViewHeightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,36 +48,62 @@ class ViewController: UIViewController {
         view.addSubview(leftView)
         view.addSubview(rightView)
         
-//        addConstraintsThroughAnchors()
+        addConstraintsThroughAnchors()
 //        addNormalConstraints()
 //        addVFLConstraints()
     }
     
+//    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+//        super.traitCollectionDidChange(previousTraitCollection)
+//
+//        if traitCollection.containsTraits(in: compactCompactTraits) || traitCollection.containsTraits(in: regularCompactTraits) {
+//            leftViewHeightConstraint.constant = 200
+//            rightViewHeightConstraint.constant = 200
+//        } else {
+//            leftViewHeightConstraint.constant = 500
+//            rightViewHeightConstraint.constant = 500
+//        }
+//    }
+//
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//
+//        coordinator.animate(alongsideTransition: { (context) in
+//            self.leftView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+//            self.rightView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+//        }) { (context) in
+//            UIView.animate(withDuration: 0.4, animations: {
+//                self.leftView.transform = .identity
+//                self.rightView.transform = .identity
+//            })
+//        }
+//    }
+//
     private func addConstraintsThroughAnchors() {
         
-//        leftView.translatesAutoresizingMaskIntoConstraints = false
-//        rightView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        // Adding constraints to leftView
-//
-//        var leading = leftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
-//        var center = leftView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
-//        var height = leftView.heightAnchor.constraint(equalToConstant: 200)
-//
-//        NSLayoutConstraint.activate([leading, center, height])
-//
-//        // Adding constraints to rightView
-//
-//        leading = rightView.leadingAnchor.constraint(equalTo: leftView.trailingAnchor, constant: 20)
-//        center = rightView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
-//        height = rightView.heightAnchor.constraint(equalToConstant: 200)
-//
-//        // Dont need this
-//        let trailing = rightView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
-//
-//        let equalWidthConstraint = rightView.widthAnchor.constraint(equalTo: leftView.widthAnchor, multiplier: 1)
-//
-//        NSLayoutConstraint.activate([leading, center, height, trailing, equalWidthConstraint])
+        leftView.translatesAutoresizingMaskIntoConstraints = false
+        rightView.translatesAutoresizingMaskIntoConstraints = false
+
+        // Adding constraints to leftView
+
+        var leading = leftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
+        var center = leftView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
+        leftViewHeightConstraint = leftView.heightAnchor.constraint(equalToConstant: 500)
+
+        NSLayoutConstraint.activate([leading, center, leftViewHeightConstraint])
+
+        // Adding constraints to rightView
+
+        leading = rightView.leadingAnchor.constraint(equalTo: leftView.trailingAnchor, constant: 50)
+        center = rightView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
+        rightViewHeightConstraint = rightView.heightAnchor.constraint(equalToConstant: 500)
+
+        // Dont need this
+        let trailing = rightView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+
+        let equalWidthConstraint = rightView.widthAnchor.constraint(equalTo: leftView.widthAnchor, multiplier: 1)
+
+        NSLayoutConstraint.activate([leading, center, rightViewHeightConstraint, trailing, equalWidthConstraint])
     }
     
     private func addNormalConstraints() {

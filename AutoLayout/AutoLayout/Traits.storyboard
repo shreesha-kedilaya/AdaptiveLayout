@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T1U-wf-VKl">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Traits View Controller-->
+        <scene sceneID="kTe-RH-tVr">
+            <objects>
+                <viewController storyboardIdentifier="TraitsViewController" id="T1U-wf-VKl" customClass="TraitsViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KGU-VM-hbU"/>
+                        <viewControllerLayoutGuide type="bottom" id="V5N-tE-GIm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U1d-Ji-SmD">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8k-HV-6kO">
+                                <rect key="frame" x="248" y="30" width="240" height="354"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="JWt-R8-JN5"/>
+                                    <constraint firstAttribute="width" constant="240" id="PLO-za-50G"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="JWt-R8-JN5"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d8k-HV-6kO" firstAttribute="centerY" secondItem="U1d-Ji-SmD" secondAttribute="centerY" id="0DA-Ix-YPn"/>
+                            <constraint firstItem="d8k-HV-6kO" firstAttribute="centerX" secondItem="U1d-Ji-SmD" secondAttribute="centerX" id="D7q-wM-nFT"/>
+                            <constraint firstItem="d8k-HV-6kO" firstAttribute="top" secondItem="KGU-VM-hbU" secondAttribute="bottom" constant="30" id="Nxw-Hv-jUL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nxw-Hv-jUL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Nxw-Hv-jUL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="greyView" destination="d8k-HV-6kO" id="us8-0P-dbz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ms-lQ-Qx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-840" y="-1296"/>
+        </scene>
+    </scenes>
+</document>
