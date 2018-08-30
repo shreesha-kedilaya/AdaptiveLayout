@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T1U-wf-VKl">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="V5N-tE-GIm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U1d-Ji-SmD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="300" verticalHuggingPriority="251" image="ProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="syS-kq-kP9">
-                                <rect key="frame" x="37.666666666666657" y="94" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="70" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="syS-kq-kP9" secondAttribute="height" multiplier="1:1" id="NJg-ve-gbI"/>
                                     <constraint firstAttribute="width" constant="390" id="nzJ-WC-lnT">
@@ -44,17 +44,20 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ie9-Pp-AqQ">
-                                <rect key="frame" x="16" y="394" width="343" height="384"/>
+                                <rect key="frame" x="16" y="370" width="343" height="297"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shreesha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c52-4r-TZ3">
-                                        <rect key="frame" x="0.0" y="151.66666666666663" width="343.66666666666669" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="92" width="343.5" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8h-u2-967">
-                                        <rect key="frame" x="0.0" y="192.66666666666663" width="343.66666666666669" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="166" width="343.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -88,10 +91,10 @@
                             <mask key="constraints">
                                 <exclude reference="Apa-g6-6ZO"/>
                                 <exclude reference="bTi-Nm-l1U"/>
-                                <exclude reference="JWs-Bp-HPU"/>
                                 <exclude reference="GsT-1m-g5j"/>
                                 <exclude reference="fig-gm-rpg"/>
                                 <exclude reference="l0u-vv-4vC"/>
+                                <exclude reference="JWs-Bp-HPU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -100,14 +103,14 @@
                                 <include reference="Apa-g6-6ZO"/>
                                 <include reference="bTi-Nm-l1U"/>
                                 <exclude reference="bVz-4X-fX3"/>
-                                <include reference="JWs-Bp-HPU"/>
-                                <exclude reference="QOt-4n-OTV"/>
                                 <include reference="GsT-1m-g5j"/>
                                 <exclude reference="L2a-Op-Pya"/>
                                 <include reference="fig-gm-rpg"/>
                                 <include reference="l0u-vv-4vC"/>
                                 <exclude reference="qol-fW-p4p"/>
                                 <exclude reference="yq5-4k-qi2"/>
+                                <include reference="JWs-Bp-HPU"/>
+                                <exclude reference="QOt-4n-OTV"/>
                             </mask>
                         </variation>
                     </view>
@@ -121,6 +124,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ProfileImage" width="260" height="260"/>
+        <image name="ProfileImage" width="390" height="390"/>
     </resources>
 </document>
